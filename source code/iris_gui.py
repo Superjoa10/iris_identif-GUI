@@ -65,15 +65,15 @@ def identif_page():# MAIN PAGE
     info_label.grid(row=2, column=0, columnspan=2)
 
     
-    types_img = custk.CTkImage(Image.open("C:/Users/João/Projects/Resume.atempts/iris_identif/midia/1_YYiQed4kj_EZ2qfg_imDWA.png"), size=(700,300))
+    types_img = custk.CTkImage(Image.open("midia/1_YYiQed4kj_EZ2qfg_imDWA.png"), size=(700,300))
     types_img_label = custk.CTkLabel(idf_0, text="", image=types_img)
     types_img_label.grid(row=3, column=0, padx=5)
 
-    descript_img_ = custk.CTkImage(Image.open("C:/Users/João/Projects/Resume.atempts/iris_identif/midia/sepals_and_petals_600w.jpg"), size=(300,300))
+    descript_img_ = custk.CTkImage(Image.open("midia/sepals_and_petals_600w.jpg"), size=(300,300))
     descript_img_label = custk.CTkLabel(idf_0, text="", image=descript_img_)
     descript_img_label.grid(row=3, column=1, padx=5)
 
-    parser.read("C:/Users/João/Projects/Resume.atempts/iris_identif/iris_ops.ini")
+    parser.read("iris_ops.ini")
     saved_language = parser.get('visuals', 'language')
     change_language(saved_language, 'identif')
 
