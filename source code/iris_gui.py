@@ -7,11 +7,14 @@ from PIL import Image
 from helper_functions import translations, callback, check_directory_exists, replace_special_char, restore_special_char
 from model_functions import predict_one, return_result, test_real, predict_and_save_results
 
+import os
+os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
+
 # PAGES
 def identif_page():# MAIN PAGE
     idf_0 = custk.CTkToplevel()
     idf_0.title("Type identif")
-    idf_0.wm_iconbitmap("C:/Users/João/Projects/Resume.atempts/iris_identif/midia/icons/Search_white.ico")
+    idf_0.wm_iconbitmap("midia/icons/Search_white.ico")
 
     idf_0.minsize(1120, 450)
     idf_0.maxsize(1120, 450)
@@ -82,14 +85,14 @@ def option_page():# OPTION PAGE
     global tets
     tets = custk.CTkToplevel()
     tets.title("Options menu")
-    tets.wm_iconbitmap("C:/Users/João/Projects/Resume.atempts/iris_identif/midia/icons/cogflat_106041.ico")
+    tets.wm_iconbitmap("midia/icons/cogflat_106041.ico")
 
     tets.geometry("360x300")
     tets.minsize(360, 300)
     tets.maxsize(380, 350)
 
     parser = ConfigParser()
-    parser.read("C:/Users/João/Projects/Resume.atempts/iris_identif/iris_ops.ini")
+    parser.read("iris_ops.ini")
     saved_language = parser.get('visuals', 'language')
     model_saved = restore_special_char(str(parser.get('file_local', 'model')))
 
@@ -126,14 +129,14 @@ def option_page():# OPTION PAGE
     apli_model_btn.grid(column=0, row = 2, pady=10)
 
     model_entry.insert(0, model_saved)
-    parser.read("C:/Users/João/Projects/Resume.atempts/iris_identif/iris_ops.ini")
+    parser.read("iris_ops.ini")
     saved_language = parser.get('visuals', 'language')
     change_language(saved_language, 'option')
 
 def information_page():# INFORMATION PAGE
     inf = custk.CTkToplevel()
     inf.title("Info. project")
-    inf.wm_iconbitmap("C:/Users/João/Projects/Resume.atempts/iris_identif/midia/icons/agenda_white.ico")
+    inf.wm_iconbitmap("midia/icons/agenda_white.ico")
 
     inf.minsize(720, 750)
     inf.maxsize(720, 750)
@@ -169,7 +172,7 @@ uma suposição sobre a espécie da íris, escolhendo a que possui a maior proba
 
 A seguir, apresento um mapa da área de distribuição das três espécies de flores:""")
     
-    types_img = custk. CTkImage(Image.open("C:/Users/João/Projects/Resume.atempts/iris_identif/midia/sign_18_6_26_fig-2.jpeg"), size=(500,150))
+    types_img = custk. CTkImage(Image.open("midia/sign_18_6_26_fig-2.jpeg"), size=(500,150))
     types_img_label = custk.CTkLabel(second_frame, text="", image=types_img)
     
     app_acept_info = custk.CTkLabel(second_frame, pady=5, justify="left", text="""
@@ -236,7 +239,7 @@ Mas as origens de pelo menos parte dos dados têm sido um mistério há décadas
     DB_exp_text.grid(column=0, row=8, sticky=W)
     credit_txt.grid(column=0, row=9, sticky=W)
 
-    parser.read("C:/Users/João/Projects/Resume.atempts/iris_identif/iris_ops.ini")
+    parser.read("iris_ops.ini")
     saved_language = parser.get('visuals', 'language')
     change_language(saved_language, 'info')
 
@@ -261,9 +264,9 @@ def color_opt(selection):
     custk.set_appearance_mode(selection_color)
 
     parser = ConfigParser()
-    parser.read("C:/Users/João/Projects/Resume.atempts/iris_identif/iris_ops.ini")
+    parser.read("iris_ops.ini")
     parser.set('visuals', 'color', selection)
-    with open("C:/Users/João/Projects/Resume.atempts/iris_identif/iris_ops.ini", 'w') as configfile:
+    with open("iris_ops.ini", 'w') as configfile:
         parser.write(configfile)
 
 def change_language(selection, current_page=any or None):
@@ -313,11 +316,11 @@ def change_language(selection, current_page=any or None):
             DB_exp_text.configure(text=translated_texts['DB_exp_text'])
          
     parser = ConfigParser()
-    parser.read("C:/Users/João/Projects/Resume.atempts/iris_identif/iris_ops.ini")
+    parser.read("iris_ops.ini")
     global saved_language
     saved_language = parser.get('visuals', 'language')
     parser.set('visuals', 'language', selection)
-    with open("C:/Users/João/Projects/Resume.atempts/iris_identif/iris_ops.ini", 'w') as configfile:
+    with open("iris_ops.ini", 'w') as configfile:
         parser.write(configfile)
 
     try_change_all(current_language)
@@ -391,11 +394,11 @@ def change_model():
         test_real(model)
 
         parser = ConfigParser()
-        parser.read("C:/Users/João/Projects/Resume.atempts/iris_identif/iris_ops.ini")
+        parser.read("iris_ops.ini")
         dir_save =  replace_special_char(directory)
 
         parser.set('file_local', 'model', dir_save)
-        with open("C:/Users/João/Projects/Resume.atempts/iris_identif/iris_ops.ini", 'w') as configfile:
+        with open("iris_ops.ini", 'w') as configfile:
                 parser.write(configfile)
 
         messagebox.showinfo("Success", "Success! Saved model location succesfully")
@@ -410,13 +413,13 @@ def change_model():
 if __name__ == "__main__": # MAIN PAGE
     root = custk.CTk()
     root.title("Identificação da Íris")
-    root.wm_iconbitmap("C:/Users/João/Projects/Resume.atempts/iris_identif/midia/icons/flower_icon-icons.com_61045-removebg-preview.ico")
+    root.wm_iconbitmap("midia/icons/flower_icon-icons.com_61045-removebg-preview.ico")
 
     root.minsize(410, 350)
     root.maxsize(420, 350)
 
     parser = ConfigParser()
-    parser.read("C:/Users/João/Projects/Resume.atempts/iris_identif/iris_ops.ini")
+    parser.read("iris_ops.ini")
     saved_language = parser.get('visuals', 'language')
     saved_color = parser.get('visuals', 'color')
 
