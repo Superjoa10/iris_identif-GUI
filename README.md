@@ -22,9 +22,14 @@ The App is a user interface, that gives 2 options on how to predict the instance
 * If  .data file should be separeted with ","
 
 
-In order to make any prediction, you should first check the config section on the app, and the location of the model presented in the page, the app comes with the .h5 file needed to use it, and already refereced correctly on the settings as a relative path, but even thou, to check if the app can read it correcly, click the apply button, and wait or a confirmation message to pop up in order to confirm if you can start doing the predictions. Or if you wish to make your own .h5 model, you can reference it on this section on the option menu and check if its usable. In order to se the settings i use for the definition of the model, refer to the line . function . on the model_functions.py file, in which if you run it directly it'll create a new .h5 file saved to the model directory on the apps root directory
+In order to make any prediction, you should first check the config section on the app, and the location of the model presented in the page, the app comes with the .h5 file needed to use it, and already refereced correctly on the settings as a relative path, but even thou, to check if the app can read it correcly, click the apply button, and wait or a confirmation message to pop up in order to confirm if you can start doing the predictions. 
 
 # Model information (TensorFlow)
 
+If you wish to make your own .h5 models for this database, you can reference it on the options menu 'model' section and check if its usable by applying the change. In order to see the settings i use for the definition of the model, refer to the line 15, "get_model" function on the model_functions.py file, in which if you run it directly it'll create a new .h5 file saved to the model directory on the apps root directory.
 
-* This project is not ment for professional use, it serves as a demonstration of my abilities in tensorflow, model definition for predictions, as well as a visualization of the idea, creation of the user interface in a way a user/non programer could easealy visualize and use.
+![Captura de tela 2023-09-21 2310055555](https://github.com/Superjoa10/iris_identif-GUI/assets/108309932/ae20aa41-0f43-47fb-b3d1-9d3639263deb)
+
+* Alternetivly you could change the values referenced in the get_model in order to get a better model, or to play around it's the definition 
+
+this project is not ment for professional use, it serves as a demonstration of my abilities in tensorflow, model definition for predictions, as well as a visualization of the idea, creation of the user interface in a way a user/non programer could easealy visualize and use.
