@@ -10,15 +10,15 @@
 
 
 # Tutorial 
-The App is a user interface, that gives 2 options on how to predict the instances of the flower given the width and length of the petal and sepal, can either predict one instance, or a file, either a excel or a .data file like the one found on the database used for training. This file should be formated as
+The App is a user interface, that gives 2 options on how to predict the instances of the flower given the width and length of the petal and sepal, can either predict one instance, or a file, either a excel or a .data file like the one found on the database used for training. This file should be formated as: 
    1. sepal length in cm	
    2. sepal width in cm	
    3. petal length in cm	
    4. petal width in cm	
    5. class: Any or None
+* If  .data file shoud be separeted with ','
 
-![image](https://github.com/Superjoa10/iris_identif-GUI/assets/108309932/6aa2f9fb-c027-4593-84e0-c7fe31e0c87a)
-. In order to make any 
+In order to make any prediction, you should first check the config section on the app, and the location of the model presented in the page, the app comes with the .h5 file needed to use it, and already refereced correctly on the settings as a relative path, but even thou, to check if the app can read it correcly, click the apply button, and wait or a confirmation message to pop up in order to confirm if you can start doing the predictions. Or if you wish to make your own .h5 model, you can reference it on this section on the option menu and check if its usable. In order to se the settings i use for the definition of the model, refer to the line . function . on the model_functions.py file, in which if you run it directly it'll create a new .h5 file saved to the model directory on the apps root directory
 
 # Model information (TensorFlow)
 
