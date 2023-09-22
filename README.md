@@ -6,8 +6,7 @@
 ![sign_18_6_26_fig-2](https://github.com/Superjoa10/iris_identif-GUI/assets/108309932/80163573-6ad6-47c6-a563-d7bcba590b94)
 
 * For more info about the database used for the model creation, visit the link below:
-* 
-Fisher,R. A.. (1988). Iris. UCI Machine Learning Repository. https://doi.org/10.24432/C56C76.
+* Fisher,R. A.. (1988). Iris. UCI Machine Learning Repository. https://doi.org/10.24432/C56C76.
 
 
 # Tutorial 
