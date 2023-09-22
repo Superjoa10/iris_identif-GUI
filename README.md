@@ -5,18 +5,20 @@
 
 ![sign_18_6_26_fig-2](https://github.com/Superjoa10/iris_identif-GUI/assets/108309932/80163573-6ad6-47c6-a563-d7bcba590b94)
 
-* for more info about the database used for the model creation, visit the link below
+* for more info about the database used for the model creation, visit the link below:
 * Fisher,R. A.. (1988). Iris. UCI Machine Learning Repository. https://doi.org/10.24432/C56C76.
-* @misc{misc_iris_53,
-  author       = {Fisher,R. A.},
-  title        = {{Iris}},
-  year         = {1988},
-  howpublished = {UCI Machine Learning Repository},
-  note         = {{DOI}: https://doi.org/10.24432/C56C76}
-}
+
 
 # Tutorial 
-The App is a user interface, that gives 2 options on how to predict the instances of the flower given the width and length of the petal and sepal,
+The App is a user interface, that gives 2 options on how to predict the instances of the flower given the width and length of the petal and sepal, can either predict one instance, or a file, either a excel or a .data file like the one found on the database used for training. This file should be formated as
+   1. sepal length in cm	
+   2. sepal width in cm	
+   3. petal length in cm	
+   4. petal width in cm	
+   5. class: Any or None
+
+![image](https://github.com/Superjoa10/iris_identif-GUI/assets/108309932/6aa2f9fb-c027-4593-84e0-c7fe31e0c87a)
+. In order to make any 
 
 # Model information (TensorFlow)
 
