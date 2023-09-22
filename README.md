@@ -16,8 +16,9 @@ The App is a user interface, that gives 2 options on how to predict the instance
    3. petal length in cm	
    4. petal width in cm	
    5. class: Any or None
+![sepals_and_petals_600w](https://github.com/Superjoa10/iris_identif-GUI/assets/108309932/e18f4ec1-f69b-4379-a075-f37a735b6525)
+
 * If  .data file should be separeted with ","
-* ![sepals_and_petals_600w](https://github.com/Superjoa10/iris_identif-GUI/assets/108309932/e18f4ec1-f69b-4379-a075-f37a735b6525)
 
 
 In order to make any prediction, you should first check the config section on the app, and the location of the model presented in the page, the app comes with the .h5 file needed to use it, and already refereced correctly on the settings as a relative path, but even thou, to check if the app can read it correcly, click the apply button, and wait or a confirmation message to pop up in order to confirm if you can start doing the predictions. Or if you wish to make your own .h5 model, you can reference it on this section on the option menu and check if its usable. In order to se the settings i use for the definition of the model, refer to the line . function . on the model_functions.py file, in which if you run it directly it'll create a new .h5 file saved to the model directory on the apps root directory
