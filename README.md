@@ -15,7 +15,8 @@ The App is a user interface, that gives 2 options on how to predict the instance
    2. sepal width in cm	
    3. petal length in cm	
    4. petal width in cm	
-   5. class: Any or None
+   5. class: Any or None]
+
 ![sepals_and_petals_600w](https://github.com/Superjoa10/iris_identif-GUI/assets/108309932/e18f4ec1-f69b-4379-a075-f37a735b6525)
 
 * If  .data file should be separeted with ","
